@@ -1,0 +1,20 @@
+<h3>---Child-One---</h3>
+			<b> {{ctnnMsg}}</b>
+			<ul>
+			 <li *ngFor = "let cn of myCityNames">
+				{{cn}}
+			 </li>
+			</ul>
+<div>{{studentAddMsg}}</div>
+<div>
+  First Name:<input (input)="student.fname=$event.target.value" /> <br/>
+  Last Name:<input (input)="student.lname=$event.target.value" /><br/>
+   <button (click)="addStud()">Add Student</button>
+</div>
+<br/>
+<b>{{message}}</b>
+<br/>
+<div>
+		Message :<input (input)="msg=$event.target.value" />
+		<br/> <button (click)="sendMsg()">Send</button>
+</div>

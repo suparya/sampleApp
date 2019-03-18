@@ -1,3 +1,11 @@
-<p>
-  home works!
-</p>
+<h4>{{parentTitle}}</h4>
+---------------------------------------------------------------------------
+<p>Name: {{stdFullName}}</p>
+<p>Message: {{msg}}</p>
+<div style="border:1px solid">
+  <app-child-one [ctMsg]="cityMsg" [ctArray]=cityArray [studentAddMsg]="stdAddMsg" (addStudent)="saveStudent($event)" (sendMsg)="printMsg($event)"></app-child-one>
+</div>
+<div style="border:1px solid; margin-top: 10px;">
+  <app-child-two [studentMsg]="stdMsg" [stdLeader]="stdLeaderObj" (addNumberEvent)="printSum($event)"> </app-child-two>
+</div>
+<p>{{sum}}</p>
